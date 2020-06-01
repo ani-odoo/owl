@@ -1,0 +1,23 @@
+.div_style {
+  width: 300px;
+  margin: 50px auto;
+  background: aliceblue;
+  padding: 10px;
+}
+
+.subdiv {
+  font-size: 18px;
+  color: #111111;
+}
+.task-list {
+  width: 200px;
+  margin: 50px auto;
+  background: aliceblue;
+  padding: 20px;
+}
+.task {
+  font-size: 18px;
+  color: #111111;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+}

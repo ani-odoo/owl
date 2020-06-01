@@ -1,0 +1,28 @@
+<templates>
+    <t t-name="inputValue">
+        <div class="row">
+            <div class="col-md-12">
+                <strong><label>Enter text here:</label></strong>
+                <input type="text" t-on-change="changeInput"/>
+            </div>
+        </div>
+    </t>
+    <t t-name="inputList">
+        <div t-if="props.values">
+            <ul>
+            <li t-foreach="props.values" t-as="value">
+                <div><t t-esc="value"/></div>
+            </li>
+            </ul>
+        </div>
+    </t>
+    <t t-name="App">
+        <div t-on-add-value="addValue">
+            <div class="text-center">
+                <h4>OWL Application 2</h4>
+            </div>
+            <InputValue/>
+            <InputList values="state.values"/>
+        </div>
+    </t>
+</templates>
