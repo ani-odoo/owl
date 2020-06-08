@@ -1,6 +1,5 @@
-const { xml } = owl.tags;
 const { Component, useState, tags } = owl;
-const { xml, css } = tags;
+const { xml, css } = owl.tags;
 
 
 const TASK_TEMPLATE = xml /* xml */`
