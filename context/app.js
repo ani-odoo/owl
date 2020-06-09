@@ -33,5 +33,9 @@ const themeContext = new Context({
 });
 // Add the themeContext the environment to make it available to all components
 App.env.themeContext = themeContext;
-const app = new App();
+const templates = await owl.utils.loadFile("app.xml");
+    const env = {
+        qweb: new owl.QWeb(templates)
+    };
+    const app = new App(env);
 app.mount(document.body);
