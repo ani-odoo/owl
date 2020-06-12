@@ -1,11 +1,13 @@
 
 function app() {
 
-    const { Component, useState } = owl;
-    const { AsyncRoot } = owl.misc;
+  const { Component, useState } = owl;
+  const { AsyncRoot } = owl.misc;
 
-    class SlowComponent extends Component {
-
+  class SlowComponent extends Component {
+      willUpdateProps() {
+          return new Promise(resolve => setTimeout(resolve, 1500));
+      }
   }
 
   class NotificationList extends Component {}
@@ -33,7 +35,7 @@ function app() {
 
 }
 
-//Xml load file
+
 async function start() {
   let templates;
   try {
